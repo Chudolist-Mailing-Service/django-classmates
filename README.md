@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/epogrebnyak/django-classmates.svg?branch=master)](https://travis-ci.org/epogrebnyak/django-classmates)
+
+
 # django-classmates
 Classmates list with Facebook authorisation
 
