@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from list.models import Group, GroupMate
+from group_list.models import Group, GroupMate
 
 
 def full_list_view(request):

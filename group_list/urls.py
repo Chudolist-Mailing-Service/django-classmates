@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from list import views
+from group_list import views
 
 urlpatterns = [
     url(r'^$', views.full_list_view, name='full_list'),
