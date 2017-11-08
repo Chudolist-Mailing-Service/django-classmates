@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>
+         Chudoclass members
+    </title>
+</head>
+<body>
+<div class="container-fluid">
+
+    <h2>Наши однокурсники в Facebook</h2>
+    <table class="table table-bordered table-striped table-condensed" style="width: auto !important;">
+        <thead>
+        <tr>
+            <th> Кто </th>
+			<th> Группа </th>
+            <th> Ссылки </th>
+        </tr>
+
+        </thead>
+        <tbody>
+            {% for mate in mates %}
+              <tr>
+      			    <td><a href="#">{{ mate.name }}</a></td>
+        				<td align=center><a href="/{{ mate.group.name }}/">{{ mate.group.name }}</a></td>
+                <td align=center>{{ mate.facebook_link|default:'' }}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
