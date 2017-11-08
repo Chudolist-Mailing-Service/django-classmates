@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 
 from group_list.models import Group, GroupMate
 
-def MateTestCase(TestCase):
+class MateTestCase(TestCase):
     def setUp(self):
         group = Group.objects.create(name='404')
         GroupMate.objects.create(
@@ -21,4 +21,4 @@ def MateTestCase(TestCase):
 
     def test_name_in_group_list(self):
         response = self.c.get('/404/')
-        self.assertIn('Иван Иванов', response.content)
+        self.assertIn(bytes('Иван Иванов', 'utf-8'), response.content)
