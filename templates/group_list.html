@@ -26,7 +26,7 @@
               <tr>
       			    <td><a href="#">{{ mate.name }}</a></td>
         				<td align=center><a href="/{{ mate.group.name }}/">{{ mate.group.name }}</a></td>
-                <td align=center>{{ mate.facebook_link|default:'' }}</td>
+                <td align=center><a href="{{ mate.facebook_link|default:'' }}">{% if mate.facebook_link %}Ссылка на фейсбук{% endif %}</a></td>
               </tr>
             {% endfor %}
         </tbody>
